@@ -10,7 +10,7 @@ globalOptions.environment = config.nodeEnv;
 
 const main = async () => {
   try {
-    if (config.nodeEnv !== 'development') {
+    if (config.nodeEnv === 'development') {
       const pathToMigration = path.join(__dirname, 'migrations');
       await migrate(sequelize, pathToMigration).up().catch((error) => logger.error('Migrate error', error));
     }

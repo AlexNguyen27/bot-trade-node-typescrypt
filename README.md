@@ -13,6 +13,9 @@
 - [Docker Compose](https://docs.docker.com/compose/) (*optional)
 - [Dockstation](https://dockstation.io/) (*optional)
 
+## start postgres
+docker run --name bot-trade-postgres-db -e POSTGRES_PASSWORD=postgres -d -p <host_port>:5432 postgres
+
 ### How to use?
 
 #### Update config.ts file (src/components/config.ts)
